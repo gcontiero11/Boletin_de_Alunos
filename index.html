@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletim de alunos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+    <style>
+        header {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="title mt-4 mb-4">Alunos IFSP</h1>
+    </header>
+
+    <div class="columns">
+        <div class="column is-8 is-offset-2">
+
+            <div class="field"><label class="label">Nome</label>
+                <div class="control">
+                    <input type="text" placeholder="Digite o nome do aluno" class="input" name="nome">
+                </div>
+            </div>
+            <div class="buttons is-centered">
+                <button class="button is-primary">Adicionar aluno</button>
+                <button class="button is-danger">Remover pior aluno</button>
+            </div>
+            <table class="table is-striped is-fullwidth is-hoverable">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Nota 1</th>
+                        <th>Nota 2</th>
+                        <th>Nota 3</th>
+                        <th>Média</th>
+                        <th>Status</th>
+                        <th>Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Leônidas</td>
+                        <td>3</td>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>3.33</td>
+                        <td>Recuperação</td>
+                        <td>
+                            <button class="button is-primary plus">Aumentar nota</button>
+                            <button class="button is-info minus">Diminuir nota</button>
+                            <button class="button is-warning rem">Remover</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Assurbanipal</td>
+                        <td>6</td>
+                        <td>8</td>
+                        <td>8.5</td>
+                        <td>7.5</td>
+                        <td>Aprovado</td>
+                        <td>
+                            <button class="button is-primary plus">Aumentar nota</button>
+                            <button class="button is-info minus">Diminuir nota</button>
+                            <button class="button is-warning rem">Remover</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ramsés</td>
+                        <td>0.5</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>1.83</td>
+                        <td>Reprovado</td>
+                        <td>
+                            <button class="button is-primary plus">Aumentar nota</button>
+                            <button class="button is-info minus">Diminuir nota</button>
+                            <button class="button is-warning rem">Remover</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Edward Teach</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>9</td>
+                        <td>5.66</td>
+                        <td>Recuperação</td>
+                        <td>
+                            <button class="button is-primary plus">Aumentar nota</button>
+                            <button class="button is-info minus">Diminuir nota</button>
+                            <button class="button is-warning rem">Remover</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gilgamesh</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>10</td>
+                        <td>Aprovado</td>
+                        <td>
+                            <button class="button is-primary plus">Aumentar nota</button>
+                            <button class="button is-info minus">Diminuir nota</button>
+                            <button class="button is-warning rem">Remover</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    <script>
+        // Gera um número aleatório entre 0.0 e 10.0 com até 1 casa decimal.
+        function geraNota() {
+            let valor = Math.floor(Math.random() * 101);
+            return valor / 10;
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
